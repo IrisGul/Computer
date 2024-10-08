@@ -42,7 +42,12 @@ public class Computer
     }
     public void setHersteller(String hersteller)
     {
-        this.hersteller=hersteller;
+        if(hersteller!=null){
+            this.hersteller=hersteller;
+        }else{
+            System.out.println("Fehler : ungültige Hersteller");
+            this.hersteller="Lenovo";
+        }
     }
     public void setLaptop(boolean laptop)
     {
@@ -50,7 +55,14 @@ public class Computer
     }
     public void setPreis(int preis)
     {
+        if((preis>=600) && (preis<=2000))
+        {
         this.preis=preis;
+    }else
+         {
+            System.out.println("Fehler: ungültige Preis");
+            this.preis=899;
+         }
     }
     public void setMhz(int mhz)
     {
